@@ -1,0 +1,1337 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Assembly-CSharp.mm</name>
+    </assembly>
+    <members>
+        <member name="T:COSML.AssemblyExtensions">
+            <summary>
+            Class containing extensions used by the Modding API for interacting with assemblies.
+            </summary>
+        </member>
+        <member name="M:COSML.AssemblyExtensions.LoadEmbeddedSprite(System.Reflection.Assembly,System.String,System.Single)">
+            <summary>
+            Load an image from the assembly's embedded resources, and return a Sprite.
+            </summary>
+            <param name="asm">The assembly to load from.</param>
+            <param name="path">The path to the image.</param>
+            <param name="pixelsPerUnit">The pixels per unit. Changing this value will scale the size of the sprite accordingly.</param>
+            <returns>A Sprite object.</returns>
+        </member>
+        <member name="M:COSML.Components.Keyboard.Keyboard.Open(System.String,System.Int32,System.Action{System.String})">
+            <summary>
+            Open controller keyboard.
+            </summary>
+            <param name="value">Input text value.</param>
+            <param name="maxChar">Max character value.</param>
+            <param name="onChange">Change action.</param>
+            <returns></returns>
+        </member>
+        <member name="M:COSML.Components.Toast.Toast.Show(COSML.I18nKey,System.Single,COSML.Components.Toast.ToastPosition)">
+            <summary>
+            Show a toast.
+            </summary>
+            <param name="text">Text of the toast.</param>
+            <param name="duration">Duration of the toast (in seconds).</param>
+            <param name="position">Position of the toast.</param>
+        </member>
+        <member name="T:COSML.ConsoleSettings">
+            <summary>
+                Settins related to the in-game console
+            </summary>
+        </member>
+        <member name="F:COSML.ConsoleSettings.UseLogColors">
+            <summary>
+                Whether to use colors in the log console.
+            </summary>
+        </member>
+        <member name="F:COSML.ConsoleSettings.InfoColor">
+            <summary>
+                The color to use for Info logging when UseLogColors is enabled
+            </summary>
+        </member>
+        <member name="F:COSML.ConsoleSettings.DebugColor">
+            <summary>
+                The color to use for Debug logging when UseLogColors is enabled
+            </summary>
+        </member>
+        <member name="F:COSML.ConsoleSettings.WarningColor">
+            <summary>
+                The color to use for Warning logging when UseLogColors is enabled
+            </summary>
+        </member>
+        <member name="F:COSML.ConsoleSettings.ErrorColor">
+            <summary>
+                The color to use for Error logging when UseLogColors is enabled
+            </summary>
+        </member>
+        <member name="F:COSML.ConsoleSettings.DefaultColor">
+            <summary>
+                The color to use when UseLogColors is disabled
+            </summary>
+        </member>
+        <member name="F:COSML.ConsoleSettings.ToggleHotkey">
+            <summary>
+            Determines the key used for toggling console
+            </summary>
+        </member>
+        <member name="F:COSML.ConsoleSettings.MaxMessageCount">
+            <summary>
+            Determines the maximum messages to be diaplayed in console
+            </summary>
+        </member>
+        <member name="F:COSML.ConsoleSettings.Font">
+            <summary>
+            Determines the system font to use for console
+            </summary>
+        </member>
+        <member name="F:COSML.ConsoleSettings.FontSize">
+            <summary>
+            Determines the font size to use for console
+            </summary>
+        </member>
+        <member name="T:COSML.COSML">
+            <summary>
+            Handles loading of mods.
+            </summary>
+        </member>
+        <member name="T:COSML.COSMLGlobalSettings">
+            <summary>
+            Class to hold GlobalSettings for COSML
+            </summary>
+        </member>
+        <member name="F:COSML.COSMLGlobalSettings.LoggingLevel">
+            <summary>
+            Logging Level to use.
+            </summary>
+        </member>
+        <member name="F:COSML.COSMLGlobalSettings.IncludeTimestamps">
+            <summary>
+            Determines if the logs should have a timestamp attached to each line of logging.
+            </summary>
+        </member>
+        <member name="F:COSML.COSMLGlobalSettings.ConsoleSettings">
+            <summary>
+            All settings related to the the in game console
+            </summary>
+        </member>
+        <member name="F:COSML.COSMLGlobalSettings.SelectedLanguage">
+            <summary>
+            The selected language, included in the game or a new one
+            </summary>
+        </member>
+        <member name="M:COSML.I18n.GetLang(I18nType)">
+            <summary>
+            Get corresponding language code from i18n type
+            </summary>
+            <param name="type">I18n type.</param>
+            <returns></returns>
+        </member>
+        <member name="M:COSML.I18n.Set(System.String,System.String)">
+            <summary>
+            Set translation by key
+            </summary>
+            <param name="key">Translation key.</param>
+            <param name="value">Translation value.</param>
+        </member>
+        <member name="M:COSML.I18n.Set(System.String,System.String,System.String)">
+            <summary>
+            Set translation by language and key
+            </summary>
+            <param name="type">Language type.</param>
+            <param name="key">Translation key.</param>
+            <param name="value">Translation value.</param>
+        </member>
+        <member name="M:COSML.I18n.Get(COSML.I18nKey)">
+            <summary>
+            Get translation by i18n key
+            </summary>
+            <param name="key">I18n key.</param>
+        </member>
+        <member name="M:COSML.I18n.Get(System.String)">
+            <summary>
+            Get translation by key
+            </summary>
+            <param name="key">Translation key.</param>
+        </member>
+        <member name="M:COSML.I18n.Get(System.String,System.String)">
+            <summary>
+            Get translation by language and key
+            </summary>
+            <param name="type">Language type.</param>
+            <param name="key">Translation key.</param>
+        </member>
+        <member name="M:COSML.I18n.Get(System.String,COSML.I18nKey)">
+            <summary>
+            Get translation by language and i18n key
+            </summary>
+            <param name="type">Language type.</param>
+            <param name="key">I18n key.</param>
+        </member>
+        <member name="M:COSML.I18n.AddComponentI18nModdedText(UnityEngine.GameObject,COSML.I18nKey,System.Boolean)">
+            <summary>
+            Add I18nModdedText component to a gameobject.
+            </summary>
+            <param name="go">GameObject to add the component to.</param>
+            <param name="key">I18nKey to set.</param>
+            <param name="forceUpper">Whether to force uppercase.</param>
+            <returns></returns>
+            <remarks>Also removes I18nText components.</remarks>
+        </member>
+        <member name="M:COSML.I18n.RemoveComponentI18nText(UnityEngine.GameObject)">
+            <summary>
+            Remove I18nText component on a gameobject.
+            </summary>
+            <param name="go">GameObject to remove the component from.</param>
+        </member>
+        <member name="F:COSML.I18nKey.label">
+            <summary>
+            Label of the i18n key.
+            </summary>
+            <remarks>Used if no key was provided, meaning it is not meant to be translated.</remarks>
+        </member>
+        <member name="M:COSML.I18nKey.#ctor(System.String,System.Object[])">
+            <summary>
+            I18n key for auto translation.
+            </summary>
+            <param name="key">Key of the translation.</param>
+            <param name="args">Arguments to pass to the formatter.</param>
+        </member>
+        <member name="T:COSML.I18nModdedText">
+            <summary>
+            I18n text component for mods.
+            </summary>
+        </member>
+        <member name="T:COSML.Log.ILogging">
+            <summary>
+            Logging Utility
+            </summary>
+        </member>
+        <member name="M:COSML.Log.ILogging.Info(System.String)">
+            <summary>
+            Log at the info level.  Includes the Mod's name in the output.
+            </summary>
+            <param name="message">Message to log.</param>
+        </member>
+        <member name="M:COSML.Log.ILogging.Info(System.Object)">
+            <summary>
+            Log at the info level.  Includes the Mod's name in the output.
+            </summary>
+            <param name="message">Message to log.</param>
+        </member>
+        <member name="M:COSML.Log.ILogging.Debug(System.String)">
+            <summary>
+            Log at the debug level.  Includes the Mod's name in the output.
+            </summary>
+            <param name="message">Message to log.</param>
+        </member>
+        <member name="M:COSML.Log.ILogging.Debug(System.Object)">
+            <summary>
+            Log at the debug level.  Includes the Mod's name in the output.
+            </summary>
+            <param name="message">Message to log.</param>
+        </member>
+        <member name="M:COSML.Log.ILogging.Error(System.String)">
+            <summary>
+            Log at the error level.  Includes the Mod's name in the output.
+            </summary>
+            <param name="message">Message to log.</param>
+        </member>
+        <member name="M:COSML.Log.ILogging.Error(System.Object)">
+            <summary>
+            Log at the error level.  Includes the Mod's name in the output.
+            </summary>
+            <param name="message">Message to log.</param>
+        </member>
+        <member name="M:COSML.Log.ILogging.Warn(System.String)">
+            <summary>
+            Log at the warn level.  Includes the Mod's name in the output.
+            </summary>
+            <param name="message">Message to log.</param>
+        </member>
+        <member name="M:COSML.Log.ILogging.Warn(System.Object)">
+            <summary>
+            Log at the warn level.  Includes the Mod's name in the output.
+            </summary>
+            <param name="message">Message to log.</param>
+        </member>
+        <member name="T:COSML.Log.Loggable">
+            <inheritdoc />
+            <summary>
+            Base class that allows other classes to have context specific logging
+            </summary>
+        </member>
+        <member name="M:COSML.Log.Loggable.#ctor">
+            <summary>
+            Basic setup for Loggable.
+            </summary>
+        </member>
+        <member name="M:COSML.Log.Loggable.Debug(System.String)">
+            <inheritdoc />
+            <summary>
+            Log at the debug level.  Includes the Mod's name in the output.
+            </summary>
+            <param name="message">Message to log.</param>
+        </member>
+        <member name="M:COSML.Log.Loggable.Debug(System.Object)">
+            <inheritdoc />
+            <summary>
+            Log at the debug level.  Includes the Mod's name in the output.
+            </summary>
+            <param name="message">Message to log.</param>
+        </member>
+        <member name="M:COSML.Log.Loggable.Info(System.String)">
+            <inheritdoc />
+            <summary>
+            Log at the info level.  Includes the Mod's name in the output.
+            </summary>
+            <param name="message">Message to log.</param>
+        </member>
+        <member name="M:COSML.Log.Loggable.Info(System.Object)">
+            <inheritdoc />
+            <summary>
+            Log at the info level.  Includes the Mod's name in the output.
+            </summary>
+            <param name="message">Message to log.</param>
+        </member>
+        <member name="M:COSML.Log.Loggable.Warn(System.String)">
+            <inheritdoc />
+            <summary>
+            Log at the warn level.  Includes the Mod's name in the output.
+            </summary>
+            <param name="message">Message to log.</param>
+        </member>
+        <member name="M:COSML.Log.Loggable.Warn(System.Object)">
+            <inheritdoc />
+            <summary>
+            Log at the warn level.  Includes the Mod's name in the output.
+            </summary>
+            <param name="message">Message to log.</param>
+        </member>
+        <member name="M:COSML.Log.Loggable.Error(System.String)">
+            <inheritdoc />
+            <summary>
+            Log at the error level.  Includes the Mod's name in the output.
+            </summary>
+            <param name="message">Message to log.</param>
+        </member>
+        <member name="M:COSML.Log.Loggable.Error(System.Object)">
+            <inheritdoc />
+            <summary>
+            Log at the error level.  Includes the Mod's name in the output.
+            </summary>
+            <param name="message">Message to log.</param>
+        </member>
+        <member name="M:COSML.Log.Loggable.FormatLogMessage(System.String)">
+            <summary>
+            Formats a log message as "[TypeName] - Message"
+            </summary>
+            <param name="message">Message to be formatted.</param>
+            <returns>Formatted Message</returns>
+        </member>
+        <member name="M:COSML.Log.Loggable.FormatLogMessage(System.Object)">
+            <summary>
+            Formats a log message as "[TypeName] - Message"
+            </summary>
+            <param name="message">Message to be formatted.</param>
+            <returns>Formatted Message</returns>
+        </member>
+        <member name="T:COSML.Log.Logging">
+            <summary>
+            Shared logger for mods to use.
+            </summary>
+        </member>
+        <member name="M:COSML.Log.Logging.Log(System.String,COSML.Log.LogLevel)">
+            <summary>
+            Checks to ensure that the logger level is currently high enough for this message, if it is, write it.
+            </summary>
+            <param name="message">Message to log.</param>
+            <param name="level">Level of log.</param>
+        </member>
+        <member name="M:COSML.Log.Logging.ExpandLines(System.String,System.String)">
+            <summary>
+            Returns a copy of <paramref name="message"/> with the string <paramref name="prefixText"/> prepended to each line.
+            </summary>
+            <param name="prefixText">The prefix text.</param>
+            <param name="message">The message.</param>
+        </member>
+        <member name="M:COSML.Log.Logging.Log(System.Object,COSML.Log.LogLevel)">
+            <summary>
+            Checks to ensure that the logger level is currently high enough for this message, if it is, write it.
+            </summary>
+            <param name="message">Message to log.</param>
+            <param name="level">Level of log.</param>
+        </member>
+        <member name="M:COSML.Log.Logging.Debug(System.String)">
+            <summary>
+            Log at the debug level. Usually reserved for diagnostics.
+            </summary>
+            <param name="message">Message to log.</param>
+        </member>
+        <member name="M:COSML.Log.Logging.Debug(System.Object)">
+            <summary>
+            Log at the debug level. Usually reserved for diagnostics.
+            </summary>
+            <param name="message">Message to log.</param>
+        </member>
+        <member name="M:COSML.Log.Logging.Info(System.String)">
+            <summary>
+            Log at the info level.
+            </summary>
+            <param name="message">Message to log.</param>
+        </member>
+        <member name="M:COSML.Log.Logging.Info(System.Object)">
+            <summary>
+            Log at the info level.
+            </summary>
+            <param name="message">Message to log.</param>
+        </member>
+        <member name="M:COSML.Log.Logging.Warn(System.String)">
+            <summary>
+            Log at the warning level.
+            </summary>
+            <param name="message">Message to log.</param>
+        </member>
+        <member name="M:COSML.Log.Logging.Warn(System.Object)">
+            <summary>
+            Log at the warning level.
+            </summary>
+            <param name="message">Message to log.</param>
+        </member>
+        <member name="M:COSML.Log.Logging.Error(System.String)">
+            <summary>
+            Log at the error level.
+            </summary>
+            <param name="message">Message to log.</param>
+        </member>
+        <member name="M:COSML.Log.Logging.Error(System.Object)">
+            <summary>
+            Log at the error level.
+            </summary>
+            <param name="message">Message to log.</param>
+        </member>
+        <member name="M:COSML.Log.Logging.WriteToFile(System.String,COSML.Log.LogLevel)">
+            <summary>
+            Locks file to write, writes to file, releases lock.
+            </summary>
+            <param name="text">Text to write.</param>
+            <param name="level">Level of log.</param>
+        </member>
+        <member name="T:COSML.Log.LogLevel">
+            <summary>
+            Level logs should be done at.
+            </summary>
+        </member>
+        <member name="F:COSML.Log.LogLevel.Debug">
+            <summary>
+            Debug level of logging - mostly developers only.
+            </summary>
+        </member>
+        <member name="F:COSML.Log.LogLevel.Info">
+            <summary>
+            Normal logging Level.
+            </summary>
+        </member>
+        <member name="F:COSML.Log.LogLevel.Warn">
+            <summary>
+            Only show warnings and above.
+            </summary>
+        </member>
+        <member name="F:COSML.Log.LogLevel.Error">
+            <summary>
+            Only show full errors.
+            </summary>
+        </member>
+        <member name="F:COSML.Log.LogLevel.Off">
+            <summary>
+            No logging at all.
+            </summary>
+        </member>
+        <member name="T:COSML.Log.SimpleLogger">
+            <inheritdoc />
+            <summary>
+            Provides access to the logging system with a formatted prefix of a given name "[Name] - Message".  This
+            is useful when you have a class that can't inherit from Loggable where you want easy logging.
+            </summary>
+        </member>
+        <member name="M:COSML.Log.SimpleLogger.#ctor(System.String)">
+            <inheritdoc />
+            <summary>
+            Constructs a loggable class with a given name.
+            </summary>
+            <param name="name">Name of the logger.</param>
+        </member>
+        <member name="T:COSML.MainMenu.MenuResources">
+            <summary>
+            Cached resources for the menu to use
+            </summary>
+        </member>
+        <member name="M:COSML.MainMenu.MenuResources.ReloadResources">
+            <summary>
+            Reloads all resources, searching to find each one again.
+            </summary>
+        </member>
+        <member name="M:COSML.MainMenu.MenuResources.ReloadEmbedded">
+            <summary>
+            Reloads all embedded resources.
+            </summary>
+        </member>
+        <member name="M:COSML.MainMenu.MenuResources.GetFontByName(System.String)">
+            <summary>
+            Get a font by its name.
+            </summary>
+            <param name="name">Name of the font.</param>
+            <returns>The found font.</returns>
+        </member>
+        <member name="M:COSML.MainMenu.MenuUtils.SaveElements">
+            <summary>
+            Backup useful common elements.
+            </summary>
+        </member>
+        <member name="M:COSML.MainMenu.MenuUtils.GoTo(System.String)">
+            <summary>
+            Swap to a menu.
+            <param name="menuId">Id of the menu.</param>
+            </summary>
+        </member>
+        <member name="M:COSML.MainMenu.MenuUtils.Back">
+            <summary>
+            Swap to the previous menu.
+            </summary>
+        </member>
+        <member name="M:COSML.MainMenu.MenuUtils.FindMenuById(System.String)">
+            <summary>
+            Find a menu in the main menu tree.
+            <param name="menuId">Id of the menu.</param>
+            </summary>
+            <returns>The found menu.</returns>
+        </member>
+        <member name="M:COSML.MainMenu.MenuUtils.Refresh">
+            <summary>
+            Refresh current menu.
+            </summary>
+        </member>
+        <member name="T:COSML.MainMenu.MenuUtils.MenuMain">
+            <summary>
+            A class representing a menu.
+            </summary>
+        </member>
+        <member name="P:COSML.MainMenu.MenuUtils.MenuMain.Id">
+            <summary>
+            Menu id.
+            </summary>
+        </member>
+        <member name="P:COSML.MainMenu.MenuUtils.MenuMain.Label">
+            <summary>
+            Menu label.
+            </summary>
+        </member>
+        <member name="P:COSML.MainMenu.MenuUtils.MenuMain.Options">
+            <summary>
+            Menu options list.
+            </summary>
+        </member>
+        <member name="P:COSML.MainMenu.MenuUtils.MenuMain.OnBack">
+            <summary>
+            Menu back action.
+            </summary>
+        </member>
+        <member name="M:COSML.MainMenu.MenuUtils.MenuMain.#ctor(System.String,COSML.I18nKey,System.Collections.Generic.IList{COSML.MainMenu.MenuUtils.MenuOption},System.Action)">
+            <summary>
+            Create a menu.
+            </summary>
+            <param name="id">Menu id.</param>
+            <param name="label">Menu label.</param>
+            <param name="options">Menu options list.</param>
+            <param name="onBack">Menu back action.</param>
+        </member>
+        <member name="T:COSML.MainMenu.MenuUtils.MenuOption">
+            <summary>
+            A class for a menu option.
+            </summary>
+        </member>
+        <member name="P:COSML.MainMenu.MenuUtils.MenuOption.Label">
+            <summary>
+            Option label.
+            </summary>
+        </member>
+        <member name="P:COSML.MainMenu.MenuUtils.MenuOption.Visible">
+            <summary>
+            Option visibility.
+            </summary>
+        </member>
+        <member name="M:COSML.MainMenu.MenuUtils.MenuOption.SetLabel(COSML.I18nKey)">
+            <summary>
+            Change menu option label.
+            </summary>
+            <param name="label"></param>
+        </member>
+        <member name="M:COSML.MainMenu.MenuUtils.MenuOption.SetVisible(System.Boolean)">
+            <summary>
+            Change menu option visibility.
+            </summary>
+            <param name="visible">Option visibility value.</param>
+        </member>
+        <member name="T:COSML.MainMenu.MenuUtils.MenuButton">
+            <summary>
+            A class representing a menu button option.
+            </summary>
+        </member>
+        <member name="P:COSML.MainMenu.MenuUtils.MenuButton.OnClick">
+            <summary>
+            Button click action.
+            </summary>
+        </member>
+        <member name="P:COSML.MainMenu.MenuUtils.MenuButton.Menu">
+            <summary>
+            Button menu.
+            </summary>
+        </member>
+        <member name="M:COSML.MainMenu.MenuUtils.MenuButton.#ctor(COSML.I18nKey,COSML.MainMenu.MenuUtils.MenuMain,System.Action,System.Boolean)">
+            <summary>
+            Create a menu button.
+            </summary>
+            <param name="label">Button label.</param>
+            <param name="menu">Button menu.</param>
+            <param name="onClick">Button click action.</param>
+            <param name="visible">Button visibility.</param>
+        </member>
+        <member name="T:COSML.MainMenu.MenuUtils.MenuText">
+            <summary>
+            A class representing a menu text option.
+            </summary>
+        </member>
+        <member name="M:COSML.MainMenu.MenuUtils.MenuText.#ctor(COSML.I18nKey,System.Boolean)">
+            <summary>
+            Create a menu text.
+            </summary>
+            <param name="label">Text label.</param>
+            <param name="visible">Text visibility.</param>
+        </member>
+        <member name="T:COSML.MainMenu.MenuUtils.MenuSelect">
+            <summary>
+            A class representing a menu select option.
+            </summary>
+        </member>
+        <member name="P:COSML.MainMenu.MenuUtils.MenuSelect.Values">
+            <summary>
+            Select values.
+            </summary>
+        </member>
+        <member name="P:COSML.MainMenu.MenuUtils.MenuSelect.Value">
+            <summary>
+            Select value.
+            </summary>
+        </member>
+        <member name="P:COSML.MainMenu.MenuUtils.MenuSelect.OnChange">
+            <summary>
+            Select change action.
+            </summary>
+        </member>
+        <member name="M:COSML.MainMenu.MenuUtils.MenuSelect.#ctor(COSML.I18nKey,COSML.I18nKey[],System.Int32,System.Action{System.Int32},System.Boolean)">
+            <summary>
+            Create a menu select.
+            </summary>
+            <param name="label">Select label.</param>
+            <param name="values">Select values.</param>
+            <param name="value">Select value.</param>
+            <param name="onChange">Select change action.</param>
+            <param name="visible">Select visibility.</param>
+        </member>
+        <member name="M:COSML.MainMenu.MenuUtils.MenuSelect.SetValues(COSML.I18nKey[])">
+            <summary>
+            Change select values
+            </summary>
+            <param name="values"></param>
+        </member>
+        <member name="M:COSML.MainMenu.MenuUtils.MenuSelect.SetValue(System.Int32)">
+            <summary>
+            Change select value
+            </summary>
+            <param name="value"></param>
+        </member>
+        <member name="T:COSML.MainMenu.MenuUtils.MenuToggle">
+            <summary>
+            A class representing a menu toggle option.
+            </summary>
+        </member>
+        <member name="P:COSML.MainMenu.MenuUtils.MenuToggle.Value">
+            <summary>
+            Toggle value.
+            </summary>
+        </member>
+        <member name="P:COSML.MainMenu.MenuUtils.MenuToggle.On">
+            <summary>
+            Toggle on label.
+            </summary>
+        </member>
+        <member name="P:COSML.MainMenu.MenuUtils.MenuToggle.Off">
+            <summary>
+            Toggle off label.
+            </summary>
+        </member>
+        <member name="P:COSML.MainMenu.MenuUtils.MenuToggle.OnChange">
+            <summary>
+            Toggle change action.
+            </summary>
+        </member>
+        <member name="M:COSML.MainMenu.MenuUtils.MenuToggle.#ctor(COSML.I18nKey,System.Boolean,COSML.I18nKey,COSML.I18nKey,System.Action{System.Boolean},System.Boolean)">
+            <summary>
+            Create a menu toggle.
+            </summary>
+            <param name="label">Toggle label.</param>
+            <param name="value">Toggle value.</param>
+            <param name="on">Toggle on label.</param>
+            <param name="off">Toggle off label.</param>
+            <param name="onChange">Toggle change action.</param>
+            <param name="visible">Toggle visibility.</param>
+        </member>
+        <member name="M:COSML.MainMenu.MenuUtils.MenuToggle.SetValue(System.Boolean)">
+            <summary>
+            Change toggle value
+            </summary>
+            <param name="value"></param>
+        </member>
+        <member name="M:COSML.MainMenu.MenuUtils.MenuToggle.SetOn(COSML.I18nKey)">
+            <summary>
+            Change toggle on label
+            </summary>
+            <param name="on"></param>
+        </member>
+        <member name="M:COSML.MainMenu.MenuUtils.MenuToggle.SetOff(COSML.I18nKey)">
+            <summary>
+            Change toggle off label
+            </summary>
+            <param name="off"></param>
+        </member>
+        <member name="T:COSML.MainMenu.MenuUtils.MenuSlider">
+            <summary>
+            A class representing a menu slider option.
+            </summary>
+        </member>
+        <member name="P:COSML.MainMenu.MenuUtils.MenuSlider.Steps">
+            <summary>
+            Slider steps.
+            </summary>
+        </member>
+        <member name="P:COSML.MainMenu.MenuUtils.MenuSlider.Value">
+            <summary>
+            Slider value.
+            </summary>
+        </member>
+        <member name="P:COSML.MainMenu.MenuUtils.MenuSlider.OnChange">
+            <summary>
+            Slider change action.
+            </summary>
+        </member>
+        <member name="M:COSML.MainMenu.MenuUtils.MenuSlider.#ctor(COSML.I18nKey,System.Object[],System.Int32,System.Action{System.Int32},System.Boolean)">
+            <summary>
+            Create a menu slider.
+            </summary>
+            <param name="label">Slider label.</param>
+            <param name="steps">Slider steps.</param>
+            <param name="value">Slider value.</param>
+            <param name="onChange">Slider change action.</param>
+            <param name="visible">Slider visibility.</param>
+        </member>
+        <member name="M:COSML.MainMenu.MenuUtils.MenuSlider.SetSteps(System.Object[])">
+            <summary>
+            Change slider steps.
+            </summary>
+            <param name="steps">Slider steps.</param>
+        </member>
+        <member name="M:COSML.MainMenu.MenuUtils.MenuSlider.SetValue(System.Int32)">
+            <summary>
+            Change slider value.
+            </summary>
+            <param name="value">Slider value.</param>
+        </member>
+        <member name="T:COSML.MainMenu.MenuUtils.MenuTextInput">
+            <summary>
+            A class representing a menu text input.
+            </summary>
+        </member>
+        <member name="P:COSML.MainMenu.MenuUtils.MenuTextInput.Text">
+            <summary>
+            Text input text.
+            </summary>
+        </member>
+        <member name="P:COSML.MainMenu.MenuUtils.MenuTextInput.Max">
+            <summary>
+            Text input max characters value.
+            </summary>
+        </member>
+        <member name="P:COSML.MainMenu.MenuUtils.MenuTextInput.OnInput">
+            <summary>
+            Text input action.
+            </summary>
+        </member>
+        <member name="M:COSML.MainMenu.MenuUtils.MenuTextInput.#ctor(COSML.I18nKey,System.String,System.Int32,System.Action{System.String},System.Boolean)">
+            <summary>
+            Create a menu text input.
+            </summary>
+            <param name="label">Text input label.</param>
+            <param name="text">Text input text.</param>
+            <param name="max">Text input max characters value.</param>
+            <param name="onInput">Text input action.</param>
+            <param name="visible">Text input visibility.</param>
+        </member>
+        <member name="M:COSML.MainMenu.MenuUtils.MenuTextInput.SetText(System.String)">
+            <summary>
+            Change text input value.
+            </summary>
+            <param name="text">Text input value.</param>
+        </member>
+        <member name="M:COSML.MainMenu.MenuUtils.MenuTextInput.SetMax(System.Int32)">
+            <summary>
+            Change text input max characters count.
+            </summary>
+            <param name="max">Max characters value.</param>
+        </member>
+        <member name="T:COSML.Modding.IMod">
+            <inheritdoc />
+            <summary>
+            Base interface for Mods
+            </summary>
+        </member>
+        <member name="M:COSML.Modding.IMod.GetName">
+            <summary>
+            Get's the Mod's Name
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:COSML.Modding.IMod.Init">
+            <summary>
+            Called after preloading of all mods.
+            </summary>
+        </member>
+        <member name="M:COSML.Modding.IMod.GetVersion">
+            <summary>
+            Returns version of Mod
+            </summary>
+            <returns>Mod Version</returns>
+        </member>
+        <member name="M:COSML.Modding.IMod.LoadPriority">
+            <summary>
+            Controls when this mod should load compared to other mods.  Defaults to ordered by name.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:COSML.Modding.IModMenu">
+            <summary>
+            Interface which signifies that this mod will register a menu in the mod list.
+            </summary>
+        </member>
+        <member name="M:COSML.Modding.IModMenu.GetMenu">
+            <summary>
+            Gets the data for the custom menu.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:COSML.Modding.IModTogglable">
+            <inheritdoc />
+            <summary>
+            Interface which signifies that this mod can be loaded _and_ unloaded while in game. When re-initialized the mod
+            will be passed null rather than preloading again.
+            </summary>
+        </member>
+        <member name="M:COSML.Modding.IModTogglable.Unload">
+            <summary>
+            Called when the Mod is disabled or unloaded. Ensure you unhook any events that you hooked up in the Init
+            method.
+            </summary>
+        </member>
+        <member name="T:COSML.Modding.Mod">
+            <inheritdoc cref="T:COSML.Log.Loggable" />
+            <inheritdoc cref="T:COSML.Modding.IMod" />
+            <summary>
+            Base mod class.
+            </summary>
+        </member>
+        <member name="F:COSML.Modding.Mod.Name">
+            <summary>
+            The Mods Name
+            </summary>
+        </member>
+        <member name="M:COSML.Modding.Mod.#ctor(System.String)">
+            <inheritdoc />
+            <summary>
+            Constructs the mod, assigns the instance and sets the name.
+            </summary>
+        </member>
+        <member name="M:COSML.Modding.Mod.GetName">
+            <inheritdoc />
+            <summary>
+            Get's the mod's Name
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:COSML.Modding.Mod.GetPreloadNames">
+            <inheritdoc />
+            <summary>
+            Returns the objects to preload in order for the mod to work.
+            </summary>
+            <returns>A List of tuples containing scene name, object name</returns>
+        </member>
+        <member name="M:COSML.Modding.Mod.PreloadSceneHooks">
+            <summary>
+            A list of requested scenes to be preloaded and actions to execute on loading of those scenes
+            </summary>
+            <returns>List of tuples containg scene names and the respective actions.</returns>
+        </member>
+        <member name="M:COSML.Modding.Mod.Init(System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.Dictionary{System.String,UnityEngine.GameObject}})">
+            <inheritdoc />
+            <summary>
+            Called after preloading of all mods.
+            </summary>
+            <param name="preloadedObjects">The preloaded objects relevant to this <see cref="T:COSML.Modding.Mod" /></param>
+        </member>
+        <member name="M:COSML.Modding.Mod.GetVersion">
+            <inheritdoc />
+            <summary>
+            Returns version of Mod
+            </summary>
+            <returns>Mod Version</returns>
+        </member>
+        <member name="M:COSML.Modding.Mod.LoadPriority">
+            <summary>
+            Controls when this mod should load compared to other mods.  Defaults to ordered by name.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:COSML.Modding.Mod.Init">
+            <summary>
+            Called after preloading of all mods.
+            </summary>
+        </member>
+        <member name="M:COSML.Modding.Mod.TryLoadGlobalSettings(System.String,System.Type)">
+            <summary>
+            Try to load the global settings from the given path. Returns true if the global settings were successfully loaded.
+            </summary>
+        </member>
+        <member name="M:COSML.Modding.Mod.SaveGlobalSettings">
+            <summary>
+            Save global settings to saves folder.
+            </summary>
+        </member>
+        <member name="T:COSML.Modding.ModHooks">
+            <summary>
+            Class to hook into various events for the game.
+            </summary>
+        </member>
+        <member name="F:COSML.Modding.ModHooks.GameVersion">
+            <summary>
+            Version of the game.
+            </summary>
+        </member>
+        <member name="P:COSML.Modding.ModHooks.GlobalSettings">
+            <summary>
+            The global ModHooks settings.
+            </summary>
+        </member>
+        <member name="E:COSML.Modding.ModHooks.ApplicationQuitHook">
+            <summary>
+            Called when the game is fully closed
+            </summary>
+        </member>
+        <member name="M:COSML.Modding.ModHooks.OnApplicationQuit">
+            <summary>
+            Called when the game is fully closed
+            </summary>
+        </member>
+        <member name="E:COSML.Modding.ModHooks.PlaceChanged">
+            <summary>
+            Called after a the place has been changed
+            </summary>
+        </member>
+        <member name="M:COSML.Modding.ModHooks.OnPlaceChanged(Place,Place)">
+            <summary>
+            Called after the place has been changed
+            </summary>
+        </member>
+        <member name="M:COSML.Modding.ModHooks.GetMod(System.String,System.Boolean,System.Boolean)">
+            <summary>
+            Gets a mod instance by name.
+            </summary>
+            <param name="name">The name of the mod.</param>
+            <param name="onlyEnabled">Should the method only return the mod if it is enabled.</param>
+            <param name="allowLoadError">Should the method return the mod even if it had load errors.</param>
+            <returns></returns>
+        </member>
+        <member name="M:COSML.Modding.ModHooks.GetMod(System.Type,System.Boolean,System.Boolean)">
+            <summary>
+            Gets a mod instance by type.
+            </summary>
+            <param name="type">The type of the mod.</param>
+            <param name="onlyEnabled">Should the method only return the mod if it is enabled.</param>
+            <param name="allowLoadError">Should the method return the mod even if it had load errors.</param>
+            <returns></returns>
+        </member>
+        <member name="M:COSML.Modding.ModHooks.ModEnabled(COSML.Modding.IModTogglable)">
+            <summary>
+            Gets if the mod is currently enabled.
+            </summary>
+            <param name="mod">The togglable mod to check.</param>
+            <returns></returns>
+        </member>
+        <member name="M:COSML.Modding.ModHooks.ModEnabled(System.String)">
+            <summary>
+            Gets if a mod is currently enabled.
+            </summary>
+            <param name="name">The name of the mod to check.</param>
+            <returns></returns>
+        </member>
+        <member name="M:COSML.Modding.ModHooks.ModEnabled(System.Type)">
+            <summary>
+            Gets if a mod is currently enabled.
+            </summary>
+            <param name="type">The type of the mod to check.</param>
+            <returns></returns>
+        </member>
+        <member name="M:COSML.Modding.ModHooks.GetAllMods(System.Boolean,System.Boolean)">
+            <summary>
+            Returns an iterator over all mods.
+            </summary>
+            <param name="onlyEnabled">Should the iterator only contain enabled mods.</param>
+            <param name="allowLoadError">Should the iterator contain mods which have load errors.</param>
+            <returns></returns>
+        </member>
+        <member name="E:COSML.Modding.ModHooks.FinishedLoadingModsHook">
+            <summary>
+            Event invoked when mods have finished loading. If modloading has already finished, subscribers will be invoked immediately.
+            </summary>
+        </member>
+        <member name="T:COSML.Modding.ILocalSettings`1">
+            <summary>
+            An interface that signifies that the mod will save data into a save file.
+            </summary>
+            <typeparam name="S">The type representing the settings.</typeparam>
+        </member>
+        <member name="M:COSML.Modding.ILocalSettings`1.OnLoadLocal(`0)">
+            <summary>
+            Called when the mod just loaded the save data.
+            </summary>
+            <param name="s">The settings the mod loaded.</param>
+        </member>
+        <member name="M:COSML.Modding.ILocalSettings`1.OnSaveLocal">
+            <summary>
+            Called when the mod needs to save data.
+            </summary>
+            <returns>The settings to be stored.</returns>
+        </member>
+        <member name="T:COSML.Modding.IGlobalSettings`1">
+            <summary>
+            An interface that signifies that the mod will save global data.
+            </summary>
+            <typeparam name="S">The type representing the settings.</typeparam>
+        </member>
+        <member name="M:COSML.Modding.IGlobalSettings`1.OnLoadGlobal(`0)">
+            <summary>
+            Called when the mod just loaded the global settings.
+            </summary>
+            <param name="s">The settings the mod loaded.</param>
+        </member>
+        <member name="M:COSML.Modding.IGlobalSettings`1.OnSaveGlobal">
+            <summary>
+            Called when the mod needs to save the global settings.
+            </summary>
+            <returns>The settings to be stored.</returns>
+        </member>
+        <member name="F:COSML.Patches.I18nEntry.args">
+            <summary>
+            Array of arguments to be formated with the i18n key.
+            </summary>
+        </member>
+        <member name="F:COSML.Patches.I18nEntry.key">
+            <summary>
+            Key of the i18n entry.
+            </summary>
+        </member>
+        <member name="T:COSML.ReflectionHelper">
+            <summary>
+            A class to aid in reflection while caching it.
+            </summary>
+        </member>
+        <member name="M:COSML.ReflectionHelper.CacheFields``1">
+            <summary>
+            Caches all fields on a type to frontload cost of reflection
+            </summary>
+            <typeparam name="T">The type to cache</typeparam>
+        </member>
+        <member name="M:COSML.ReflectionHelper.GetFieldInfo(System.Type,System.String,System.Boolean)">
+            <summary>
+            Gets a field on a type
+            </summary>
+            <param name="t">Type</param>
+            <param name="field">Field name</param>
+            <param name="instance"></param>
+            <returns>FieldInfo for field or null if field does not exist.</returns>
+        </member>
+        <member name="M:COSML.ReflectionHelper.GetInstanceFieldGetter``2(System.Reflection.FieldInfo)">
+            <summary>
+            Gets delegate getting field on type
+            </summary>
+            <param name="fi">FieldInfo for field.</param>
+            <returns>Function which gets value of field</returns>
+        </member>
+        <member name="M:COSML.ReflectionHelper.GetInstanceFieldSetter``2(System.Reflection.FieldInfo)">
+            <summary>
+            Gets delegate setting field on type
+            </summary>
+            <param name="fi">FieldInfo for field.</param>
+            <returns>Function which sets field passed as FieldInfo</returns>
+        </member>
+        <member name="M:COSML.ReflectionHelper.GetField``3(``0,System.String,``2)">
+            <summary>
+            Get a field on an object using a string. Cast to TCast before returning and if field doesn't exist return default.
+            </summary>
+            <param name="obj">Object/Object of type which the field is on</param>
+            <param name="name">Name of the field</param>
+            <param name="default">Default return</param>
+            <typeparam name="TField">Type of field</typeparam>
+            <typeparam name="TObject">Type of object being passed in</typeparam>
+            <typeparam name="TCast">Type of return.</typeparam>
+            <returns>The value of a field on an object/type</returns>
+        </member>
+        <member name="M:COSML.ReflectionHelper.GetField``2(``0,System.String)">
+            <summary>
+            Get a field on an object using a string.
+            </summary>
+            <param name="obj">Object/Object of type which the field is on</param>
+            <param name="name">Name of the field</param>
+            <typeparam name="TField">Type of field</typeparam>
+            <typeparam name="TObject">Type of object being passed in</typeparam>
+            <returns>The value of a field on an object/type</returns>
+        </member>
+        <member name="M:COSML.ReflectionHelper.GetField``2(System.String)">
+            <summary>
+            Get a static field on an type using a string.
+            </summary>
+            <param name="name">Name of the field</param>
+            <typeparam name="TType">Type which static field resides upon</typeparam>
+            <typeparam name="TField">Type of field</typeparam>
+            <returns>The value of a field on an object/type</returns>
+        </member>
+        <member name="M:COSML.ReflectionHelper.GetField``1(System.Type,System.String)">
+            <summary>
+            Get a static field on an type using a string. (for static classes)
+            </summary>
+            <param name="type">Static Type which static field resides upon</param>
+            <param name="name">Name of the field</param>
+            <typeparam name="TField">Type of field</typeparam>
+            <returns>The value of a field on an object/type</returns>
+        </member>
+        <member name="M:COSML.ReflectionHelper.SetFieldSafe``2(``0,System.String,``1)">
+            <summary>
+            Set a field on an object using a string.
+            </summary>
+            <param name="obj">Object/Object of type which the field is on</param>
+            <param name="name">Name of the field</param>
+            <param name="value">Value to set the field to</param>
+            <typeparam name="TField">Type of field</typeparam>
+            <typeparam name="TObject">Type of object being passed in</typeparam>
+        </member>
+        <member name="M:COSML.ReflectionHelper.SetField``2(``0,System.String,``1)">
+            <summary>
+            Set a field on an object using a string.
+            </summary>
+            <param name="obj">Object/Object of type which the field is on</param>
+            <param name="name">Name of the field</param>
+            <param name="value">Value to set the field to</param>
+            <typeparam name="TField">Type of field</typeparam>
+            <typeparam name="TObject">Type of object being passed in</typeparam>
+        </member>
+        <member name="M:COSML.ReflectionHelper.SetField``2(System.String,``1)">
+            <summary>
+            Set a static field on an type using a string.
+            </summary>
+            <param name="name">Name of the field</param>
+            <param name="value">Value to set the field to</param>
+            <typeparam name="TType">Type which static field resides upon</typeparam>
+            <typeparam name="TField">Type of field</typeparam>
+        </member>
+        <member name="M:COSML.ReflectionHelper.SetField``1(System.Type,System.String,``0)">
+            <summary>
+            Set a static field on an type using a string. (for static classes)
+            </summary>
+            <param name="type">Static Type which static field resides upon</param>
+            <param name="name">Name of the field</param>
+            <param name="value">Value to set the field to</param>
+            <typeparam name="TField">Type of field</typeparam>
+        </member>
+        <member name="M:COSML.ReflectionHelper.GetPropertyInfo(System.Type,System.String,System.Boolean)">
+            <summary>
+            Gets a property on a type
+            </summary>
+            <param name="t">Type</param>
+            <param name="property">Property name</param>
+            <param name="instance"></param>
+            <returns>PropertyInfo for property or null if property does not exist.</returns>
+        </member>
+        <member name="M:COSML.ReflectionHelper.GetProperty``2(``0,System.String)">
+            <summary>
+            Get a property on an object using a string.
+            </summary>
+            <param name="obj">Object/Object of type which the property is on</param>
+            <param name="name">Name of the property</param>
+            <typeparam name="TProperty">Type of property</typeparam>
+            <typeparam name="TObject">Type of object being passed in</typeparam>
+            <returns>The value of a property on an object/type</returns>
+        </member>
+        <member name="M:COSML.ReflectionHelper.GetProperty``2(System.String)">
+            <summary>
+            Get a static property on an type using a string.
+            </summary>
+            <param name="name">Name of the property</param>
+            <typeparam name="TType">Type which static property resides upon</typeparam>
+            <typeparam name="TProperty">Type of property</typeparam>
+            <returns>The value of a property on an object/type</returns>
+        </member>
+        <member name="M:COSML.ReflectionHelper.GetProperty``1(System.Type,System.String)">
+            <summary>
+            Get a static property on an type using a string. (for static classes)
+            </summary>
+            <param name="type">Static Type which static property resides upon</param>
+            <param name="name">Name of the property</param>
+            <typeparam name="TProperty">Type of property</typeparam>
+            <returns>The value of a property on an object/type</returns>
+        </member>
+        <member name="M:COSML.ReflectionHelper.SetProperty``2(``0,System.String,``1)">
+            <summary>
+            Set a property on an object using a string.
+            </summary>
+            <param name="obj">Object/Object of type which the property is on</param>
+            <param name="name">Name of the property</param>
+            <param name="value">Value to set the property to</param>
+            <typeparam name="TProperty">Type of property</typeparam>
+            <typeparam name="TObject">Type of object being passed in</typeparam>
+        </member>
+        <member name="M:COSML.ReflectionHelper.SetProperty``2(System.String,``1)">
+            <summary>
+            Set a static property on an type using a string.
+            </summary>
+            <param name="name">Name of the property</param>
+            <param name="value">Value to set the property to</param>
+            <typeparam name="TType">Type which static property resides upon</typeparam>
+            <typeparam name="TProperty">Type of property</typeparam>
+        </member>
+        <member name="M:COSML.ReflectionHelper.SetProperty``1(System.Type,System.String,``0)">
+            <summary>
+            Set a static property on an type using a string. (for static classes)
+            </summary>
+            <param name="type">Static Type which static property resides upon</param>
+            <param name="name">Name of the property</param>
+            <param name="value">Value to set the property to</param>
+            <typeparam name="TProperty">Type of property</typeparam>
+        </member>
+        <member name="M:COSML.ReflectionHelper.GetMethodInfo(System.Type,System.String,System.Boolean)">
+            <summary>
+            Gets a method on a type 
+            </summary>
+            <param name="t">Type</param>
+            <param name="method">Method name</param>
+            <param name="instance"></param>
+            <returns>MethodInfo for method or null if method does not exist.</returns>
+        </member>
+        <member name="M:COSML.ReflectionHelper.CallMethod``2(``0,System.String,System.Object[])">
+            <summary>
+            Call an instance method with a return type
+            </summary>
+            <param name="obj">Object of type which the method is on</param>
+            <param name="name">Name of the method</param>
+            <param name="param">The paramters that need to be passed into the method.</param>
+            <typeparam name="TObject">Type of object being passed in</typeparam>
+            <typeparam name="TReturn">The return type of the method</typeparam>
+            <returns>The specified return type</returns>
+        </member>
+        <member name="M:COSML.ReflectionHelper.CallMethod``1(``0,System.String,System.Object[])">
+            <summary>
+            Call an instance method without a return type
+            </summary>
+            <param name="obj">Object of type which the method is on</param>
+            <param name="name">Name of the method</param>
+            <param name="param">The paramters that need to be passed into the method.</param>
+            <typeparam name="TObject">Type of object being passed in</typeparam>
+            <returns>None</returns>
+        </member>
+        <member name="M:COSML.ReflectionHelper.CallMethod``2(System.String,System.Object[])">
+            <summary>
+            Call a static method with a return type
+            </summary>
+            <param name="name">Name of the method</param>
+            <param name="param">The paramters that need to be passed into the method.</param>
+            <typeparam name="TType">The Type which static method resides upon</typeparam>
+            <typeparam name="TReturn">The return type of the method</typeparam>
+            <returns>The specified return type</returns>
+        </member>
+        <member name="M:COSML.ReflectionHelper.CallMethod``1(System.String,System.Object[])">
+            <summary>
+            Call a static method without a return type
+            </summary>
+            <param name="name">Name of the method</param>
+            <param name="param">The paramters that need to be passed into the method.</param>
+            <typeparam name="TType">The Type which static method resides upon</typeparam>
+            <returns>None</returns>
+        </member>
+        <member name="M:COSML.ReflectionHelper.CallMethod``1(System.Type,System.String,System.Object[])">
+            <summary>
+            Call a static method with a return type (for static classes)
+            </summary>
+            <param name="type">Static Type which static method resides upon</param>
+            <param name="name">Name of the method</param>
+            <param name="param">The paramters that need to be passed into the method.</param>
+            <typeparam name="TReturn">The return type of the method</typeparam>
+            <returns>The specified return type</returns>
+        </member>
+        <member name="M:COSML.ReflectionHelper.CallMethod(System.Type,System.String,System.Object[])">
+            <summary>
+            Call a static method without a return type (for static classes)
+            </summary>
+            <param name="type">Static Type which static method resides upon</param>
+            <param name="name">Name of the method</param>
+            <param name="param">The paramters that need to be passed into the method.</param>
+            <returns>None</returns>
+        </member>
+        <member name="T:COSML.UnityUtils">
+            <summary>
+            Class containing extensions used by COSML for interacting with Unity types.
+            </summary>
+        </member>
+        <member name="M:COSML.UnityUtils.GetOrAddComponent``1(UnityEngine.GameObject)">
+            <summary>
+            Get the component of type T attached to GameObject go. If go does not have such a component, add that component (and return it).
+            </summary>
+        </member>
+        <member name="M:COSML.UnityUtils.FindGameObject(UnityEngine.SceneManagement.Scene,System.String)">
+            <summary>
+            Find a game object by name in the scene. The object's name must be given in the hierarchy.
+            </summary>
+            <param name="scene">The scene to search.</param>
+            <param name="objName">The name of the object in the hierarchy, with '/' separating parent GameObjects from child GameObjects.</param>
+            <returns>The GameObject if found; null if not.</returns>
+            <exception cref="T:System.ArgumentException">Thrown if the path to the game object is invalid.</exception>
+        </member>
+        <member name="M:COSML.UnityUtils.FindGreatestWidth(UnityEngine.UI.Text,System.Object[])">
+            <summary>
+            Get the max width of a text.
+            </summary>
+            <param name="text">Text on which to test.</param>
+            <param name="values">Values to test the width.</param>
+            <returns></returns>
+        </member>
+        <member name="M:COSML.UnityUtils.ClearChildren(UnityEngine.GameObject,System.Func{UnityEngine.GameObject,System.Boolean})">
+            <summary>
+            Destroy a gameobject's children by condition.
+            </summary>
+            <param name="parent">GameObject parent.</param>
+            <param name="condition">Condition for destroying children.</param>
+        </member>
+        <member name="M:COSML.UnityUtils.GetPath(UnityEngine.Transform)">
+            <summary>
+            Get the full path of a GameObject/Component
+            </summary>
+            <param name="current"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,6 @@
+cosml.menu.mods=Моди
+cosml.menu.mods.enabled=Увімкнено
+cosml.menu.mods.enabled.on=Увімк.
+cosml.menu.mods.enabled.off=Вимк.
+cosml.menu.mods.page=Сторінка
+cosml.menu.mods.error=[Помилка] {0}
